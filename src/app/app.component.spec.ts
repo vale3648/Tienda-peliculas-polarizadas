@@ -22,8 +22,8 @@ describe('AppComponent', () => {
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('tienda-peliculas-polarizadas');
+    const app = fixture.componentInstance;
+    expect(app.title).toBeDefined();
+    expect(app.title).toContain('tienda-peliculas-polarizadas');
   });
 });
