@@ -1,3 +1,4 @@
-<h1>{{ title }}</h1>
-    <mat-slide-toggle>modo oscuro</mat-slide-toggle>
-    <router-outlet></router-outlet> 
+<router-outlet> </router-outlet>
+<button (click)="toggleTheme()">
+    Modo  {{ isDarkMode() ? 'Claro' : 'Oscuro' }}
+</button>
