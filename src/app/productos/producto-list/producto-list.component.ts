@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 import { ProductoService } from '../../services/producto.service';
 import { CarritoService } from '../../services/carrito.service';
 
 @Component({
+  standalone: true, 
   selector: 'app-producto-list',
-  imports: [CommonModule],
+  styleUrls: ['./producto-list.component.css'],
+  imports: [CommonModule, MatCardModule, MatGridListModule, MatButtonModule],
   templateUrl: './producto-list.component.html',
 })
 export class ProductoListComponent implements OnInit {
@@ -18,6 +23,11 @@ export class ProductoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.productos = this.productoService.getProductos();
+    console.log('Productos cargados:', this.productos);
+  }
+
+  agregarProducto(product: any) {
+    console.log('Producto agregado al carrito:', product);
   }
 
   agregarAlCarrito(producto: any) {

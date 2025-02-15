@@ -8,7 +8,7 @@ import { ThemeService } from './services/theme.service';
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'tienda-peliculas-polarizadas';
@@ -23,3 +23,4 @@ export class AppComponent {
     return this.themeService.isDarkMode();
   }
 }
+

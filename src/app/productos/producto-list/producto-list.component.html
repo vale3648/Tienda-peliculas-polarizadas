@@ -1,6 +1,17 @@
-<div class="producto" *ngFor="let producto of productos">
-    <img [src]="producto.imagen" [alt]="producto.nombre">
-    <h3>{{ producto.nombre }}</h3>
-    <p>Precio: ${{ producto.precio }}</p>
-    <button (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
-  </div>
+<mat-grid-list cols="3" rowHeight="350px">
+  <mat-grid-tile *ngFor="let product of productos"> 
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Precio: {{ product.price | currency }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="agregarProducto(product)">
+          Agregar al carrito
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -68,6 +68,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "liveReload": false
+          },
           "configurations": {
             "production": {
               "buildTarget": "tienda-peliculas-polarizadas:build:production"

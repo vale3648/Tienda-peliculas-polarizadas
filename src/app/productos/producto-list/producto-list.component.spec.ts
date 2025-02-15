@@ -28,7 +28,7 @@ describe('ProductoListComponent', () => {
     carritoService = TestBed.inject(CarritoService) as jasmine.SpyObj<CarritoService>;
 
     productoService.getProductos.and.returnValue([
-      { id: 1, nombre: 'Película Polarizada', precio: 500, imagen: "" }
+      { id: 1, nombre: 'Película Polarizada', precio: 500, imagen: "", description:"" }
     ]);
   });
 

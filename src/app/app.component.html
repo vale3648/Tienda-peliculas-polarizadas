@@ -1,4 +1,5 @@
-<router-outlet> </router-outlet>
-<button (click)="toggleTheme()">
-    Modo  {{ isDarkMode() ? 'Claro' : 'Oscuro' }}
-</button>
+<label class="switch">
+    <input type="checkbox" (change)="toggleTheme()" [checked]="isDarkMode()" />
+    <span class="slider"></span>
+  </label>
+  <router-outlet></router-outlet>
