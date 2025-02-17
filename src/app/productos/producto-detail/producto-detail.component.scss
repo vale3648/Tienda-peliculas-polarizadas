@@ -1,0 +1,14 @@
+.detalle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .detalle-imagen {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  

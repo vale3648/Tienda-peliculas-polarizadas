@@ -6,3 +6,13 @@ body {
   background-color: #121212;
   color: white;
 }
+.producto-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+mat-card {
+  width: 250px;
+}

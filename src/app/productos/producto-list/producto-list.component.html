@@ -1,17 +1,22 @@
 <mat-grid-list cols="3" rowHeight="350px">
   <mat-grid-tile *ngFor="let product of productos"> 
     <mat-card class="product-card">
+      <img mat-card-image src={{product.imagen}} alt="">
       <mat-card-header>
-        <mat-card-title>{{ product.name }}</mat-card-title>
+        <mat-card-title>{{ product.nombre }}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p>Precio: {{ product.price | currency }}</p>
+        <p>Precio: {{ product.precio | currency }}</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="agregarProducto(product)">
+        <a [routerLink]="['/productos', product.id]">Ver detalles</a>
+        <button mat-raised-button color="primary" (click)="agregarProducto(productos)">
           Agregar al carrito
         </button>
       </mat-card-actions>
+      <mat-card-header>
+        <p>Detalles: {{ product.description}}</p>
+      </mat-card-header>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

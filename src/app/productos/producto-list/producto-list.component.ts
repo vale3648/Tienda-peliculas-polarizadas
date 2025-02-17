@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,7 +11,8 @@ import { CarritoService } from '../../services/carrito.service';
   standalone: true, 
   selector: 'app-producto-list',
   styleUrls: ['./producto-list.component.css'],
-  imports: [CommonModule, MatCardModule, MatGridListModule, MatButtonModule],
+  imports: [CommonModule,RouterModule, MatCardModule, MatGridListModule, MatButtonModule],
+  providers: [ProductoService, CarritoService], 
   templateUrl: './producto-list.component.html',
 })
 export class ProductoListComponent implements OnInit {

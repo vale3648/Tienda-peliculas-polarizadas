@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { ProductoService } from './services/producto.service';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -10,7 +13,8 @@ export const routes: Routes = [
   { path: '**', redirectTo: '/landing' }
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AppComponent, BrowserModule],
+  providers: [ProductoService],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

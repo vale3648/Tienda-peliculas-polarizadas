@@ -1,1 +1,8 @@
-<p>producto-detail works!</p>
+<div class="detalle-container">
+    <img [src]="producto.imagen" alt="{{ producto.nombre }}" class="detalle-imagen">
+    <h2>{{ producto.nombre }}</h2>
+    <p>{{ producto.descripcion }}</p>
+    <p><strong>Precio:</strong> {{ producto.precio | currency }}</p>
+    <button mat-button color="primary">Agregar al Carrito</button>
+    <button mat-button color="accent">Cotizar</button>
+  </div>  
