@@ -9,13 +9,12 @@
         <p>Precio: {{ product.precio | currency }}</p>
       </mat-card-content>
       <mat-card-actions>
-        <a [routerLink]="['/productos', product.id]">Ver detalles</a>
-        <button mat-raised-button color="primary" (click)="agregarProducto(productos)">
-          Agregar al carrito
-        </button>
+        <button mat-button color="primary" [routerLink]="['/productos', product.id]">
+          Ver detalles
+        </button>        
       </mat-card-actions>
       <mat-card-header>
-        <p>Detalles: {{ product.description}}</p>
+        <p></p>
       </mat-card-header>
     </mat-card>
   </mat-grid-tile>

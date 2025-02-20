@@ -1,8 +1,11 @@
-<div class="detalle-container">
-    <img [src]="producto.imagen" alt="{{ producto.nombre }}" class="detalle-imagen">
-    <h2>{{ producto.nombre }}</h2>
-    <p>{{ producto.descripcion }}</p>
-    <p><strong>Precio:</strong> {{ producto.precio | currency }}</p>
+  <mat-card *ngIf="producto">
+    <mat-card-title>{{ producto.nombre }}</mat-card-title>
+    <img mat-card-image [src]="producto.imagen" alt="Imagen del producto">
+    <mat-card-content>
+      <p>{{ producto.description}}</p>
+      <p>Precio: {{ producto.precio | currency }}</p>
+    </mat-card-content>
     <button mat-button color="primary">Agregar al Carrito</button>
     <button mat-button color="accent">Cotizar</button>
-  </div>  
+  </mat-card>
+  

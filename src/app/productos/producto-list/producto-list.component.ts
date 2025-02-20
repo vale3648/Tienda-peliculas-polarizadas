@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProductoService } from '../../services/producto.service';
 import { CarritoService } from '../../services/carrito.service';
 
+
 @Component({
   standalone: true, 
   selector: 'app-producto-list',
